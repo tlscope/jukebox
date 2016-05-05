@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>CodeTV</title>
+    
+        <link rel="stylesheet" href="/css/style.css">
+
+  </head>
+
+  <body>
+
+  <div class="login">
+  <div class="heading">
+
+    <h2>We have <%= customers.length %> customers:</h2>
+
+    <% customers.forEach(function(customer){ %>
+    <li style="color:white;"><%= customer.name %></li>
+    <% }); %>
+
+  </div>
+ </div>
+    
+    
+  </body>
+</html>
