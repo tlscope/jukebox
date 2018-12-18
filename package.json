@@ -19,6 +19,7 @@
     "grunt-sails-linker": "~1.0.4",
     "grunt-sync": "0.8.0",
     "include-all": "~4.0.3",
+    "lodash": "^4.17.11",
     "rc": "1.2.8",
     "sails": "~1.1.0",
     "sails-disk": "~1.0.1",
