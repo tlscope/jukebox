@@ -8,4 +8,4 @@ You can clone the project by running:
 
 Start the project by running:
 
-`node run app.js`
+`sails lift`
