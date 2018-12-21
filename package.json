@@ -1,39 +1,36 @@
 {
-  "name": "sailsjs-demo",
+  "name": "project",
   "private": true,
   "version": "0.0.0",
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
-    "ejs": "2.6.1",
-    "grunt": "1.0.3",
-    "grunt-contrib-clean": "2.0.0",
-    "grunt-contrib-coffee": "2.0.0",
-    "grunt-contrib-concat": "1.0.1",
-    "grunt-contrib-copy": "1.0.0",
-    "grunt-contrib-cssmin": "3.0.0",
-    "grunt-contrib-jst": "1.0.0",
-    "grunt-contrib-less": "2.0.0",
-    "grunt-contrib-uglify": "4.0.0",
-    "grunt-contrib-watch": "1.1.0",
-    "grunt-sails-linker": "~1.0.4",
-    "grunt-sync": "0.8.0",
-    "include-all": "~4.0.3",
-    "lodash": "^4.17.11",
-    "rc": "1.2.8",
-    "sails": "~1.1.0",
-    "sails-disk": "~1.0.1",
-    "sails-mysql": "^1.0.1"
+    "sails": "^1.1.0",
+    "grunt": "1.0.1",
+    "sails-hook-grunt": "^3.1.0",
+    "sails-hook-orm": "^2.1.1",
+    "sails-hook-sockets": "^1.5.5",
+    "@sailshq/connect-redis": "^3.2.1",
+    "@sailshq/socket.io-redis": "^5.2.0",
+    "@sailshq/lodash": "^3.10.3"
+  },
+  "devDependencies": {
+    "@sailshq/eslint": "^4.19.3"
   },
   "scripts": {
-    "debug": "node debug app.js",
-    "start": "node app.js"
+    "start": "NODE_ENV=production node app.js",
+    "test": "npm run lint && npm run custom-tests && echo 'Done.'",
+    "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
+    "custom-tests": "echo \"(No other custom tests yet.)\" && echo"
   },
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/root/sailsjs-demo.git"
+    "url": "git://github.com/telescope/project.git"
   },
-  "author": "root",
-  "license": ""
+  "author": "telescope",
+  "license": "",
+  "engines": {
+    "node": "^10.14"
+  }
 }
